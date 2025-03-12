@@ -51,7 +51,10 @@ final class PageController extends AbstractController
 
         try {
             $auth->signInWithEmailAndPassword('rommel.xana@gmail.com','123456');
+            //Conseguimos la información de la autentificación
             $data = $auth->data();
+
+            //conseguimos los tokens y los guardamos en una sesión
             $access_token = $data->access_token;;
             $refresh_token = $data->refresh_token;;
 
@@ -60,9 +63,13 @@ final class PageController extends AbstractController
                 'refresh_token' => $refresh_token,
             ]);
 
+            //Conseguimos la información del usuario con el token de accesso
             $tokens = $session->get('tokens');
-
             $user_data = $auth->getUser($tokens['access_token']);
+
+            //User id || con la entidad guardariamos toda lo información en la entidad y guardriamos esa entidad en una sesión
+            $user_id = $user_data->id;
+            $session->set('user_id', $user_id);
 
             return new JsonResponse($user_data);
         } catch (\Exception $e) {
