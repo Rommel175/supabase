@@ -73,9 +73,34 @@ final class PageController extends AbstractController
 
     #[Route('/logout', name: 'app_logout')]
     public function logout(SessionInterface $session): JSONResponse {
-        $session->remove('tokens');
+        # $session->remove('tokens');
         $session->clear();
 
         return new JsonResponse($session->all());
     }
+
+    #[Route('/updateUser', name: 'app_update')]
+    public function update(SessionInterface $session): JSONResponse {
+        $service = new PHPSupabase\Service(
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV6c2pla21vZWtwYmVjenB4bmpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE3MDc3NzMsImV4cCI6MjA1NzI4Mzc3M30.54iqh4UWIDUKSpWH2H5bgFISsakkvJEvPR1UEhclmr8",
+            "https://ezsjekmoekpbeczpxnjl.supabase.co/auth/v1"
+        );
+
+        $auth = $service->createAuth();
+        $tokens = $session->get('tokens');
+        $access_token = $tokens['access_token'];
+
+        $new_metadata = [
+            'display_name' => 'Alexander',
+        ];
+
+        try {
+            //EMAIL, PASSWORD, METADATA
+            $data = $auth->updateUser($access_token, null, null, $new_metadata);
+            return new JsonResponse(['update' => 'Se ha actualizado correcctamente']);
+        } catch (\Exception $e) {
+            return new JsonResponse(['error' => $auth->getError()], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+    }
+
 }

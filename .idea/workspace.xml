@@ -5,68 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d62a06e2-9f2c-4ff3-b503-1ee1e3996e5e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/supabase.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/installed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/installed.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/composer/platform_check.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Command/DumpEnvCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Command/InstallRecipesCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Command/RecipesCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Command/UpdateRecipesCommand.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/AbstractConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/AddLinesConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/BundlesConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/ComposerScriptsConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/ContainerConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/CopyFromPackageConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/CopyFromRecipeConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/DockerComposeConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/DockerfileConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/DotenvConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/EnvConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/GitignoreConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Configurator/MakefileConfigurator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Downloader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Event/UpdateEvent.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Flex.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/GithubApi.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/InformationOperation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Lock.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Options.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/PackageFilter.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/PackageJsonSynchronizer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/PackageResolver.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Path.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Recipe.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/ScriptExecutor.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/SymfonyBundle.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Unpack/Operation.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Unpack/Result.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Unpacker.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Update/DiffHelper.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Update/RecipePatch.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Update/RecipePatcher.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vendor/symfony/flex/src/Update/RecipeUpdate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PageController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -244,7 +184,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "last_opened_file_path": "/home/rommel/PhpstormProjects/supabase",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -271,7 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1741768139939</updated>
       <workItem from="1741768143684" duration="2252000" />
-      <workItem from="1741770433151" duration="3408000" />
+      <workItem from="1741770433151" duration="4395000" />
     </task>
     <servers />
   </component>
