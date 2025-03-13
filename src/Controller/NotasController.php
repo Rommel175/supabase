@@ -24,11 +24,11 @@ final class NotasController extends AbstractController
         $tokens = $session->get('tokens');
         $accessToken = $tokens['access_token'];
 
-        $notas = $service->setBearerToken($accessToken)->initializeDatabase('notas', 'id');
-        //$notas = $service->initializeDatabase('notas','id');
+        //$notas = $service->setBearerToken($accessToken)->initializeDatabase('notas', 'id');
+        $notas = $service->initializeDatabase('notas','id');
 
         $newNota = [
-            'titulo' => 'Nota creada desde Symony 2',
+            'titulo' => 'Nueva nota creada desde Symony',
         ];
 
         try {
@@ -84,6 +84,43 @@ final class NotasController extends AbstractController
         try {
             $data = $notas->delete('6');
             return new JsonResponse($data);
+        } catch (Exception $e) {
+            return new JsonResponse(['error' =>  $e->getMessage()], 500);
+        }
+    }
+
+    #[Route('/allNotas', name: 'app_allNotas')]
+    public function allNotas(SessionInterface $session): JsonResponse
+    {
+        $service = new PHPSupabase\Service(
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV6c2pla21vZWtwYmVjenB4bmpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE3MDc3NzMsImV4cCI6MjA1NzI4Mzc3M30.54iqh4UWIDUKSpWH2H5bgFISsakkvJEvPR1UEhclmr8",
+            "https://ezsjekmoekpbeczpxnjl.supabase.co/auth/v1"
+        );
+
+        $notas = $service->initializeDatabase('notas','id');
+
+        try {
+            $products = $notas->fetchAll()->getResult();
+            //return  new JsonResponse($products[0]->id);
+            return new JsonResponse($products);
+        } catch (Exception $e) {
+            return new JsonResponse(['error' =>  $e->getMessage()], 500);
+        }
+    }
+
+    #[Route('/findId/{id}', name: 'app_afindId')]
+    public function findId(SessionInterface $session, $id): JsonResponse
+    {
+        $service = new PHPSupabase\Service(
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImV6c2pla21vZWtwYmVjenB4bmpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDE3MDc3NzMsImV4cCI6MjA1NzI4Mzc3M30.54iqh4UWIDUKSpWH2H5bgFISsakkvJEvPR1UEhclmr8",
+            "https://ezsjekmoekpbeczpxnjl.supabase.co/auth/v1"
+        );
+
+        $notas = $service->initializeDatabase('notas','id');
+
+        try {
+            $notas = $notas->findBy('id',$id)->getResult();
+            return new JsonResponse($notas);
         } catch (Exception $e) {
             return new JsonResponse(['error' =>  $e->getMessage()], 500);
         }
